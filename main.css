@@ -15,6 +15,22 @@ body {
 .text-center {
   text-align: center;
 }
+.winner-team {
+  color: #f58543;
+}
+
+body h1 {
+  display: table;
+  margin: 0.3rem auto;
+  color: white;
+  background-color: #0a193b;
+  font-size: 2rem;
+  opacity: 0.6;
+  padding: 0.2rem 0.3rem;
+  border-radius: 6px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
 .main-title {
   color: whitesmoke;

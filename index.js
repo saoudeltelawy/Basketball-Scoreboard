@@ -2,12 +2,15 @@
 let homeTeamScore = 0;
 let guestTeamScore = 0;
 // alert(typeof homeTeamScore);
-let homeScoreBoard = document.querySelector(".home-score > p");
+let homeScoreBoard = document.querySelector(".home-score p");
 // console.log(homeScoreBoard);
 // homeScoreBoard.textContent = homeTeamScore;
 let guestScoreBoard = document.querySelector(".guest-score > p");
 // guestScoreBoard.textContent = guestTeamScore;
 
+let winnerTitle = document.querySelector("body h1");
+// let winnerTeam = document.querySelector(".winner-team");
+let winnerTeam;
 // home - buttons;
 let onePointBtn = document.querySelector(".home-buttons button:nth-child(1)");
 let twoPointsBtn = document.querySelector(".home-buttons button:nth-child(2)");
@@ -21,32 +24,15 @@ let buttons = document.querySelectorAll("button");
 // Reset Btn
 let resetBtn = document.querySelector(".btn-reset button");
 
-// Scoring
-// homeButtons.addEventListener("click", function () {
-//   //   alert(homeTeamScore);
-//   //   alert(this.innerHTML);
-
-//   if (this.innerHTML === "+1") {
-//     alert("Sex");
-//   } else {
-//     alert("Rony");
-//   }
-//   homeTeamScore += 1;
-//   //   alert(homeTeamScore);
-//   homeScoreBoard.textContent = homeTeamScore;
-// });
-
-//   for (let button of homeButtons) {
-//     button.addEventListener("click", function() {
-//         alert(this.innerHTML);
-//     )};
-
 for (let button of buttons) {
   button.addEventListener("click", function () {
     if (this.innerText === "+1") {
       if (this.parentNode.closest(".home-buttons")) {
+        // Debug: alert(homeTeamScore);
         homeTeamScore += 1;
         homeScoreBoard.textContent = homeTeamScore;
+        // Debug alert(typeof homeTeamScore);
+        homeTeamScore;
       } else {
         guestTeamScore += 1;
         guestScoreBoard.textContent = guestTeamScore;
@@ -68,8 +54,36 @@ for (let button of buttons) {
         guestScoreBoard.textContent = guestTeamScore;
       }
     }
+    // Identify the Winner
+    if (homeTeamScore > guestTeamScore) {
+      winnerTeam = "Home";
+
+      winnerTitle.innerHTML =
+        "<span class='winner-team'>" +
+        winnerTeam +
+        "</span>" +
+        " Team is the Current Winner";
+    } else if (guestTeamScore > homeTeamScore) {
+      winnerTeam = "Guest";
+
+      winnerTitle.innerHTML =
+        "<span class='winner-team'>" +
+        winnerTeam +
+        "</span>" +
+        " Team is the Current Winner";
+    } else if (homeTeamScore === guestTeamScore) {
+      winnerTitle.textContent = "It is a Tie!!!";
+    }
   });
 }
+
+// Identify Winner
+// let winnerTitle = document.querySelector("body h1");
+// if (homeScoreBoard.textContent === 0) {
+//   alert("sex11");
+// } else if (homeTeamScore === 1) {
+//   alert("sex");
+// }
 
 // Reset Score
 resetBtn.addEventListener("click", () => {
@@ -85,6 +99,8 @@ resetBtn.addEventListener("click", () => {
     homeScoreBoard.textContent = homeTeamScore;
     guestScoreBoard.textContent = guestTeamScore;
   }
+
+  winnerTitle.textContent = "Let's start a New Game!";
 });
 
 // Timer
