@@ -66,7 +66,8 @@ body h1 {
 .home-score,
 .guest-score {
   /* background-color: rgb(63, 77, 226); */
-  background-color: #fd8949d1;
+  /* background-color: #fd8949d1; */
+  background-color: rgba(0, 0, 0, 0.795);
   /* width: 70px;
   height: 70px; */
   margin: auto;
@@ -85,6 +86,8 @@ body h1 {
 .home-score p,
 .guest-score p {
   margin-block: 1.2rem;
+  /* color: red; */
+  color: #f94f6d;
 }
 
 .home-buttons button,
