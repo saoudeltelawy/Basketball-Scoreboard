@@ -4,17 +4,19 @@
 
 body {
   margin: 0;
-  /* background-color: #18244d; */
-  /* background: url("https://images.unsplash.com/photo-1494199505258-5f95387f933c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80"); */
-  background: url("https://images.unsplash.com/photo-1629245100728-4e9f710a5800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80");
+  /* background: url("https://images.unsplash.com/photo-1629245100728-4e9f710a5800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"); */
+  background: url("https://img.freepik.com/free-photo/glowing-basketball-hoop-dark-cityscape-competition-generative-ai_188544-46070.jpg?t=st=1698152249~exp=1698155849~hmac=49956601aad1c9802d0552b8195c622b6e5c630a2bcbd341b8dac0762118b37c&w=2000");
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0 0 3px black;
 }
+
 .text-center {
   text-align: center;
 }
+
 .winner-team {
   color: #f58543;
 }
@@ -34,17 +36,23 @@ body h1 {
 
 .main-title {
   color: whitesmoke;
-  font-size: 3rem;
-  position: absolute;
-  top: 50%;
+  font-size: 2.6rem;
+  /* position: absolute;
+  top: 50%; */
   /* transform: translate(0%, -50%); */
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   letter-spacing: 4px;
-  opacity: 0.7;
+  /* opacity: 0.7; */
   font-weight: bolder;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
+  /* text-shadow: 0 0 3px black; */
+  background-color: #0a1e27;
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 4px;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .container {
@@ -170,8 +178,11 @@ body h1 {
   font-size: 2.5rem;
   letter-spacing: 3px;
   color: whitesmoke;
+  font-weight: 900;
   opacity: 0.8;
+  /* text-shadow: 0 0 3px black; */
 }
+
 .timer button {
   max-width: 300px;
   padding: 0.85rem 0.95rem;
